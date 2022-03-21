@@ -1,0 +1,48 @@
+### Users create (signup)
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "Test name",
+  "email": "test@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+### Sessions create (login)
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "password"
+}
+
+### Create Dog
+
+POST http://localhost:3000/dogs
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDc5NzY3MDN9.e5__yRWkfsiTuJWrzo2wIYHIbvrhHD9FmlDDPar-ACg
+Content-Type: application/json
+
+{
+    "name": "Emma",
+    "age": 13,
+    "breed": "Pug"
+}
+
+### Update Dog
+
+PATCH http://localhost:3000/dogs/3
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDc5NzgyNjV9.X01lK_ySMMaVYovhlzuIv4YZ3iUieezcmcA5TpCD-BQ
+Content-Type: application/json
+
+{
+    "name": "Emma",
+    "age": 101,
+    "breed": "Pug God"
+}
+
+### Delete Dog
+
+DELETE http://localhost:3000/dogs/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDc5Nzk0MTh9.iw5WEpS87dZK2eCSUYmh_xV_7JJtGckiPx90RN1gbSw
