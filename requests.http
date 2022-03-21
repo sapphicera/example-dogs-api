@@ -18,6 +18,13 @@ Content-Type: application/json
   "password": "password"
 }
 
+### Index Dogs
+GET http://localhost:3000/dogs
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDc5ODA1MjJ9.9sU2Tr4mvLyYh4VqHo4Dfy_2lEmy9Pqy3fMnZLAe-kA
+
+### Show Dog
+GET http://localhost:3000/dogs/5
+
 ### Create Dog
 
 POST http://localhost:3000/dogs
@@ -32,8 +39,8 @@ Content-Type: application/json
 
 ### Update Dog
 
-PATCH http://localhost:3000/dogs/3
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDc5NzgyNjV9.X01lK_ySMMaVYovhlzuIv4YZ3iUieezcmcA5TpCD-BQ
+PATCH http://localhost:3000/dogs/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDc5ODA1MjJ9.9sU2Tr4mvLyYh4VqHo4Dfy_2lEmy9Pqy3fMnZLAe-kA
 Content-Type: application/json
 
 {
@@ -44,5 +51,5 @@ Content-Type: application/json
 
 ### Delete Dog
 
-DELETE http://localhost:3000/dogs/2
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDc5Nzk0MTh9.iw5WEpS87dZK2eCSUYmh_xV_7JJtGckiPx90RN1gbSw
+DELETE http://localhost:3000/dogs/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDc5ODA1MjJ9.9sU2Tr4mvLyYh4VqHo4Dfy_2lEmy9Pqy3fMnZLAe-kA

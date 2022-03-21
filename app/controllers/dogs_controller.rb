@@ -1,4 +1,14 @@
 class DogsController < ApplicationController
+  def index
+    dogs = current_user.dogs
+    render json: dogs.as_json
+  end
+
+  def show
+    dog = Dog.find_by(id: params[:id])
+    render json: dog.as_json
+  end
+
   def create
     if current_user.nil?
       render json: {message: "must be logged in to create dog"}
@@ -12,7 +22,6 @@ class DogsController < ApplicationController
       dog.save ? message = "dog saved!" : message = "error occurred"
       render json: {message: message}
     end
-    # render json: {errors: dog.errors.full_messages}, status: 422
   end
 
   def update
@@ -43,5 +52,4 @@ class DogsController < ApplicationController
       render json: {message: "dog deleted!"}
     end
   end
-
 end
